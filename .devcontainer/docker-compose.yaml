@@ -1,0 +1,7 @@
+services:
+  workspace:
+    build: .
+    volumes:
+      - ..:~/workspace
+      - ~/.ssh:~/.ssh
+    command: /bin/sh -c "sleep infinity"
