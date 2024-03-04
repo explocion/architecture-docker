@@ -2,6 +2,6 @@ services:
   workspace:
     build: .
     volumes:
-      - ..:~/workspace
-      - ~/.ssh:~/.ssh
+      - ..:/home/arch/workspace
+      - ~/.ssh:/home/arch/.ssh
     command: /bin/sh -c "sleep infinity"
