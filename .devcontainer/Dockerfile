@@ -42,7 +42,7 @@ RUN ghcup install ghc && ghcup set ghc
 RUN ghcup install stack && ghcup set stack
 RUN ghcup install cabal && ghcup set cabal
 RUN stack new clash-simple clash-lang/simple
-RUN cd clash-simple && stack update && stack build
+RUN cd clash-simple && cabal update && cabal build
 
 # Setup zsh
 COPY --chown=arch .zshrc $HOME/.zshrc
